@@ -15,6 +15,7 @@ class GetStartedPage extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/image_get_started.png'),
+                fit: BoxFit.cover,
               ),
             ),
           ),
@@ -45,7 +46,9 @@ class GetStartedPage extends StatelessWidget {
                   height: 55,
                   margin: EdgeInsets.only(top: 50, bottom: 80),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/sign-up');
+                    },
                     child: Text(
                       'Get Started',
                       style: whiteTextStyle.copyWith(
